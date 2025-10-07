@@ -29,7 +29,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final String broker = 'io.adafruit.com';
   final String username = 'fanol';
-  final String key = 'key';
+  final String key = const String.fromEnvironment('ADAFRUIT_KEY');
   final String topic = 'fanol/feeds/sensor-data';
 
   late MqttServerClient client;
